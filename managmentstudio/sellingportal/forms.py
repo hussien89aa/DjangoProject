@@ -1,12 +1,12 @@
 from django import forms
 
 class UserRegistrar(forms.Form):
-    first_name = forms.CharField(required=True, widget=forms.TextInput( ))
-    last_name = forms.CharField(required=True, widget=forms.TextInput( ))
-    age = forms.CharField(required=True, widget=forms.TextInput( ))
-    date_birth = forms.CharField(required=True, widget=forms.TextInput( ))
+    first_name = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'} ))
+    last_name = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}  ))
+    age = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}  ))
+    date_birth = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}  ))
 
 
 
 class DegreeRegistrar(forms.Form):
-    student_drgee = forms.CharField(required=True, widget=forms.TextInput( ))
+    student_drgee = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}  ))

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>welcome to index page</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+
+   <div class="jumbotron">
+       
 name :{{name}}
 ,age:{{age}}
 <h>list of jobs</h>
@@ -13,5 +12,6 @@ name :{{name}}
 {%endfor%}
 
 
-</body>
-</html>
+       </div>
+
+        {%endblock %}
