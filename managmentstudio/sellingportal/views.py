@@ -26,9 +26,21 @@ def Student(request):
 
 def StudentDegree(request,student_id):
     degrees=models.Degree.objects.filter(student_id=student_id )
+    stuents=models.Student.objects.get(id=student_id)
+    form_data=forms.DegreeRegistrar(request.POST or None)
+    msg=''
+    if form_data.is_valid():
+       degree=models.Degree()
+       degree.student_drgee=form_data.cleaned_data['student_drgee']
+       degree.student_id=stuents
+       degree.save()
+       msg='data is saved'
     context={
-        'degrees':degrees
+        'degrees':degrees,
+         'formregister':form_data,
+         'msg':msg
     }
+
     return render(request,'degrees.html',context)
 
 
