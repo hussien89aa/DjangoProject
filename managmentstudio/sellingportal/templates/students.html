@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>list of students</h2>
+<table border="1" style="font-size : 18pt">
+    <tr>
+        <td>
+           id
+        </td>
+        <td>
+           Firts name
+        </td>
+         <td>
+           Last name
+        </td>
+         <td>
+            age
+        </td>
+         <td>
+           Date Birth
+        </td>
+    </tr>
+{% for student in stuents %}
+  <tr>
+        <td>
+           {{student.id}}
+        </td>
+        <td>
+     <a href="/degree/{{student.id}}"> {{student.first_name}} </a>
+        </td>
+         <td>
+         {{student.last_name}}
+        </td>
+         <td>
+         {{student.age}}
+        </td>
+         <td>
+            {{student.date_birth}}
+        </td>
+    </tr>
+
+
+
+{%endfor%}
+
+
+    </table>
+</body>
+</html>
